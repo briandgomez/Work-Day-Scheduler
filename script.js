@@ -9,19 +9,42 @@ var currentDate = document.getElementById('currentDay');
 var dateFormat = 'dddd, MMMM Do';
 currentDate.textContent = moment().format(dateFormat);
 
+var eventObj = {};
 //Save new event
 $(".saveBtn").on('click', function () {
-    var val = $(this).siblings("textarea").val().trim();
-    var time = $(this).parent().attr('id');
 
-    localStorage.setItem(time, val);
-    
+    var text = $(this).siblings("textarea").val().trim();
+    var timeBlock = $(this).parent().attr('id');
+
     //Returns current hour
-    var currentTime = moment().hour();
-    console.log(currentTime);
-    var currentDate2 = moment().format('MM/DD/YYYY');
-    console.log(currentDate2);
-    
+    var eventTime = moment().hour();
+    var eventDate = moment().format('MM/DD/YYYY');
+
+    eventObj = {
+        'text': text,
+        'time': eventTime,
+        'date': eventDate
+    }
+
+    localStorage.setItem(timeBlock, JSON.stringify(eventObj));
+
+    eventStatus(timeBlock);
 })
 
 //Check event due date 
+var eventStatus = function (param) {
+
+    var objInfo = JSON.parse(localStorage.getItem(param));
+    console.log(objInfo.time);
+    
+    $(this).each( function () {
+        if (objInfo.time < 17) {
+            console.log('before time')
+        }
+        else {
+            console.log('after time')
+        }
+    })
+
+}
+
