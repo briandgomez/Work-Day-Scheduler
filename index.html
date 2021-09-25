@@ -1,38 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+  <title>Work Day Scheduler</title>
+</head>
+
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class="container">
+    <!--Time blocks ranging from 9am - 5pm-->
+    <!--9am-->
+    <div class="row">
+      <div class="col-md-1 hour">
+        <p>9am</p>
+      </div>
+      <textarea name="event" cols="100" rows="2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero est magni a consequuntur nobis distinctio aliquid? Quia aspernatur sapiente voluptatum inventore. Placeat soluta nobis autem illum rerum recusandae distinctio asperiores.
+      </textarea>
+      <div class="col-md-1 saveBtn">
+        <span class="oi oi-lock-locked"></span>
+      </div>
     </div>
+    <!--10am-->
+    <div class="row">
+      <div class="col-md-1 hour">
+        <p>10am</p>
+      </div>
+      <textarea name="event" cols="100" rows="2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero est magni a consequuntur nobis distinctio aliquid? Quia aspernatur sapiente voluptatum inventore. Placeat soluta nobis autem illum rerum recusandae distinctio asperiores.
+      </textarea>
+      <div class="col-md-1 saveBtn">
+        <span class="oi oi-lock-locked"></span>
+      </div>
+    </div>
+    <!--11am-->
+    <div class="row">
+      <div class="col-md-1 hour">
+        <p>11am</p>
+      </div>
+      <textarea name="event" cols="100" rows="2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero est magni a consequuntur nobis distinctio aliquid? Quia aspernatur sapiente voluptatum inventore. Placeat soluta nobis autem illum rerum recusandae distinctio asperiores.
+      </textarea>
+      <div class="col-md-1 saveBtn">
+        <span class="oi oi-lock-locked"></span>
+      </div>
+    </div>
+    <!--12pm-->
+    <div class="row">
+      <div class="col-md-1 hour">
+        <p>12pm</p>
+      </div>
+      <textarea name="event" cols="100" rows="2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero est magni a consequuntur nobis distinctio aliquid? Quia aspernatur sapiente voluptatum inventore. Placeat soluta nobis autem illum rerum recusandae distinctio asperiores.
+      </textarea>
+      <div class="col-md-1 saveBtn">
+        <span class="oi oi-lock-locked"></span>
+      </div>
+    </div>
+    <!--1pm-->
+    <div class="row">
+      <div class="col-md-1 hour">
+        <p>1pm</p>
+      </div>
+      <textarea name="event" cols="100" rows="2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero est magni a consequuntur nobis distinctio aliquid? Quia aspernatur sapiente voluptatum inventore. Placeat soluta nobis autem illum rerum recusandae distinctio asperiores.
+      </textarea>
+      <div class="col-md-1 saveBtn">
+        <span class="oi oi-lock-locked"></span>
+      </div>
+    </div>
+    <!--2pm-->
+    <div class="row">
+      <div class="col-md-1 hour">
+        <p>2pm</p>
+      </div>
+      <textarea name="event" cols="100" rows="2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero est magni a consequuntur nobis distinctio aliquid? Quia aspernatur sapiente voluptatum inventore. Placeat soluta nobis autem illum rerum recusandae distinctio asperiores.
+      </textarea>
+      <div class="col-md-1 saveBtn">
+        <span class="oi oi-lock-locked"></span>
+      </div>
+    </div>
+    <!--3pm-->
+    <div class="row">
+      <div class="col-md-1 hour">
+        <p>3pm</p>
+      </div>
+      <textarea name="event" cols="100" rows="2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero est magni a consequuntur nobis distinctio aliquid? Quia aspernatur sapiente voluptatum inventore. Placeat soluta nobis autem illum rerum recusandae distinctio asperiores.
+      </textarea>
+      <div class="col-md-1 saveBtn">
+        <span class="oi oi-lock-locked"></span>
+      </div>
+    </div>
+    <!--4pm-->
+    <div class="row">
+      <div class="col-md-1 hour">
+        <p>4pm</p>
+      </div>
+      <textarea name="event" cols="100" rows="2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero est magni a consequuntur nobis distinctio aliquid? Quia aspernatur sapiente voluptatum inventore. Placeat soluta nobis autem illum rerum recusandae distinctio asperiores.
+      </textarea>
+      <div class="col-md-1 saveBtn">
+        <span class="oi oi-lock-locked"></span>
+      </div>
+    </div>
+    <!--5pm-->
+    <div class="row">
+      <div class="col-md-1 hour">
+        <p>5pm</p>
+      </div>
+      <textarea name="event" cols="100" rows="2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero est magni a consequuntur nobis distinctio aliquid? Quia aspernatur sapiente voluptatum inventore. Placeat soluta nobis autem illum rerum recusandae distinctio asperiores.
+      </textarea>
+      <div class="col-md-1 saveBtn">
+        <span class="oi oi-lock-locked"></span>
+      </div>
+    </div>
+    <!--
+      1. class="row w/ 3 columns inside of it
+      2. Time column = 2 @ medium screen and Event column = 10 @ medium-->
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+    <!--Make time blocks change color as the days go on-->
+    <!--
+        1.Refer to asyncronous module 5 
+        2. 5.4 = colors
+      -->
+
+    <!--Allow user to save events using save button and localStorage and should remain when the page is refreshed-->
+    <!--
+        1. 4.4.5 = save to localStorage
+        2. 4.4.6 = load from localStorage
+      -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+</body>
+
 </html>
