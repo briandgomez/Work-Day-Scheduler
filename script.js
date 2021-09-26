@@ -5,7 +5,12 @@ currentDate.textContent = moment().format(dateFormat);
 
 var eventObj = {};
 var timeNow = moment().format("HH");
+
 //Save new event
+$("textarea").on("click", function () {
+
+})
+
 $(".saveBtn").on('click', function () {
 
     var text = $(this).siblings("textarea").val().trim();
@@ -25,13 +30,22 @@ $(".saveBtn").on('click', function () {
 })
 
 var eventDue = function (timeBlockNum) {
-    if (timeNow === timeBlockNum) {
-        $('#hour-' + timeBlockNum).find('textarea').addClass('present');
-    }
-    else if (timeNow < timeBlockNum) {
+    $('textarea').addClass('past');
+    if (timeNow < timeBlockNum) {
         $('#hour-' + timeBlockNum).find('textarea').addClass('future');
+
     }
     else if (timeNow > timeBlockNum) {
         $('#hour-' + timeBlockNum).find('textarea').addClass('past');
     }
+    else {
+        $('#hour-' + timeBlockNum).find('textarea').addClass('present');
+
+    }
+
 }
+
+/*var displayEvents = function () {
+    var storageObj = JSON.parse(localStorage.getItem(eventObj));
+    console.log(storageObj);
+}*/
