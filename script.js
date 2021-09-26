@@ -1,50 +1,37 @@
-/*Make time blocks change color as the days go on
-    1.Refer to asyncronous module 5 
-    2. 5.4.6 = colors & 5.4.5 = current date
-    3. 
-*/
-
 //Returns current date in 'Day of Week, Month, Day' format 
 var currentDate = document.getElementById('currentDay');
 var dateFormat = 'dddd, MMMM Do';
 currentDate.textContent = moment().format(dateFormat);
 
 var eventObj = {};
+var timeNow = moment().format("HH");
 //Save new event
 $(".saveBtn").on('click', function () {
 
     var text = $(this).siblings("textarea").val().trim();
-    var timeBlock = $(this).parent().attr('id');
 
-    //Returns current hour
-    var eventTime = moment().hour();
-    var eventDate = moment().format('MM/DD/YYYY');
+    //Returns string of the id (Ex:'hour-9')
+    var timeBlockId = $(this).parent().attr('id');
+    var timeBlockNum = parseInt(timeBlockId.slice(-2));
 
     eventObj = {
         'text': text,
-        'time': eventTime,
-        'date': eventDate
+        'time': timeBlockNum,
     }
 
-    localStorage.setItem(timeBlock, JSON.stringify(eventObj));
+    localStorage.setItem(timeBlockId, JSON.stringify(eventObj));
 
-    eventStatus(timeBlock);
+    eventDue(timeBlockNum);
 })
 
-//Check event due date 
-var eventStatus = function (param) {
-
-    var objInfo = JSON.parse(localStorage.getItem(param));
-    console.log(objInfo.time);
-    
-    $(this).each( function () {
-        if (objInfo.time < 17) {
-            console.log('before time')
-        }
-        else {
-            console.log('after time')
-        }
-    })
-
+var eventDue = function (timeBlockNum) {
+    if (timeNow === timeBlockNum) {
+        $('#hour-' + timeBlockNum).find('textarea').addClass('present');
+    }
+    else if (timeNow < timeBlockNum) {
+        $('#hour-' + timeBlockNum).find('textarea').addClass('future');
+    }
+    else if (timeNow > timeBlockNum) {
+        $('#hour-' + timeBlockNum).find('textarea').addClass('past');
+    }
 }
-
