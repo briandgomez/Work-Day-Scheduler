@@ -4,7 +4,7 @@ A work day scheduler allows people to keep track and organize their tasks easily
 ## Work Scheduler Image
 ![image](https://user-images.githubusercontent.com/69539559/134822776-cc5cc3db-3c27-4ac5-a9cd-931f4cf47bb1.png)
 
-## Features
+## Tools
 This project was created using the following:
 * Bootstrap
 * Jquery
